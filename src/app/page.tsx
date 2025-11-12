@@ -9,7 +9,7 @@ export default function Home() {
   const [showModal, setShowModal] = useState(false)
   const [imageOfModal, setImageOfModal] = useState('')
 
-  const opemModal = (id: number) => {
+  const openModal = (id: number) => {
     const photo = pictureList.find(i => i.id === id);
     if (photo) {
       setImageOfModal(photo.url)
@@ -29,7 +29,7 @@ export default function Home() {
           <PhotoItem
             key={i.id}
             photo={i}
-            onClick={() => { opemModal(i.id) }}
+            onClick={() => { openModal(i.id) }}
           />
         )}
       </section>
